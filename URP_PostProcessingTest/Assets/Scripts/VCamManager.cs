@@ -4,30 +4,19 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
 
-public class VCamManager : MonoBehaviour
+public class VCamManager : MonoBehaviour, InputActions.ICameraActions
 {
-    public InputAction leftShoulder;
-    public InputAction rightShoulder;
+    InputActions.CameraActions input;
     public List<CinemachineVirtualCamera> vcamera;
 
     public int vcamActive = 0;
-
-    private void OnEnable()
-    {
-        leftShoulder.Enable();
-        rightShoulder.Enable();
-    }
-
-    private void OnDisable()
-    {
-        leftShoulder.Disable();
-        rightShoulder.Disable();
-    }
+    void OnEnable() => input.Enable();
+    void OnDestroy() => input.Disable();
 
     void Awake()
     {
-        leftShoulder.performed += ctx => vCamChange(false);
-        rightShoulder.performed += ctx => vCamChange(true);
+        input = new InputActions.CameraActions(new InputActions());
+        input.SetCallbacks(this);
     }
 
     void vCamChange(bool sw)
@@ -54,5 +43,17 @@ public class VCamManager : MonoBehaviour
             else
                 vcamera[i].Priority = 10;
         }
+    }
+
+    public void OnLeftSide(InputAction.CallbackContext context)
+    {
+        if (context.started)
+            vCamChange(false);
+    }
+
+    public void OnRightSide(InputAction.CallbackContext context)
+    {
+        if (context.started)
+            vCamChange(false);
     }
 }

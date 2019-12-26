@@ -1,36 +1,32 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class HidePanelUI : MonoBehaviour
+public class HidePanelUI : MonoBehaviour, InputActions.IPanelActions
 {
+    InputActions.PanelActions input;
     public GameObject panel;
-    public InputAction hidePanel;
     bool state;
 
-    private void OnEnable()
-    {
-        hidePanel.Enable();
-    }
-
-    private void OnDisable()
-    {
-        hidePanel.Disable();
-    }
+    void OnEnable() => input.Enable();
+    void OnDestroy() => input.Disable();
 
     void Awake()
     {
         state = true;
         HideUI();
-        hidePanel.performed += ctx => HideUI();
+        input = new InputActions.PanelActions(new InputActions());
+        input.SetCallbacks(this);
     }
 
     void HideUI()
     {
         state = !state;
         panel.SetActive(state);
+    }
+
+    public void OnHidePanel(InputAction.CallbackContext context)
+    {
+        if (context.started)
+            HideUI();
     }
 }

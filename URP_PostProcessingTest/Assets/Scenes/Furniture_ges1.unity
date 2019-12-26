@@ -10253,54 +10253,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf4bf712c9f8f764f94b25615cac18ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftShoulder:
-    m_Name: Left Shoulder
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: e270100c-5ba5-4624-b750-0722f6608273
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 72c38dfc-fa5e-428d-be57-a92b3ec4a25a
-      m_Path: <Gamepad>/leftShoulder
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Left Shoulder
-      m_Flags: 0
-    - m_Name: 
-      m_Id: f8dae4a1-5b34-482a-8c26-a5c5762ff3d3
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Left Shoulder
-      m_Flags: 0
-  rightShoulder:
-    m_Name: Right Shoulder
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: c0a2f510-ef8d-49c2-ae52-b5d8b148c813
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 6ecef216-1e7b-4301-bd48-457174b89b93
-      m_Path: <Gamepad>/rightShoulder
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Right Shoulder
-      m_Flags: 0
-    - m_Name: 
-      m_Id: c07baaf2-bf76-472e-bbbe-2b67317cea67
-      m_Path: <Keyboard>/d
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Right Shoulder
-      m_Flags: 0
   vcamera:
   - {fileID: 2085495712}
   - {fileID: 579249444}
@@ -17546,7 +17498,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -17605,30 +17557,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 1555391106}
-  hidePanel:
-    m_Name: Hide Panel
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: cf56a69d-71bb-4a57-a83b-d9b7d6edf9d5
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: f537efd1-4006-444c-be19-ec19961adbfa
-      m_Path: <Gamepad>/start
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Hide Panel
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 635cd6f5-aa48-4589-b7ac-0d59bac9a941
-      m_Path: <Keyboard>/space
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Hide Panel
-      m_Flags: 0
 --- !u!1 &1968627498
 GameObject:
   m_ObjectHideFlags: 0
