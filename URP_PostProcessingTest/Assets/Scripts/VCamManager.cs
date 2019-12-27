@@ -54,6 +54,6 @@ public class VCamManager : MonoBehaviour, InputActions.ICameraActions
     public void OnRightSide(InputAction.CallbackContext context)
     {
         if (context.started)
-            vCamChange(false);
+            vCamChange(true);
     }
 }
