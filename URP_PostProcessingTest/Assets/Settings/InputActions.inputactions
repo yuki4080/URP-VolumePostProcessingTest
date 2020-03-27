@@ -47,17 +47,6 @@
                 },
                 {
                     "name": "",
-                    "id": "b26e4928-5ccc-45b9-97e9-447574c35858",
-                    "path": "<Touchscreen>/delta/x",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touch",
-                    "action": "LeftSide",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "2ebf18ea-c337-4b18-a04a-58e23e057af9",
                     "path": "<Gamepad>/rightShoulder",
                     "interactions": "",

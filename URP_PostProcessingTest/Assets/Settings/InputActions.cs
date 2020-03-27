@@ -8,7 +8,7 @@ using UnityEngine.InputSystem.Utilities;
 
 public class @InputActions : IInputActionCollection, IDisposable
 {
-    private InputActionAsset asset;
+    public InputActionAsset asset { get; }
     public @InputActions()
     {
         asset = InputActionAsset.FromJson(@"{
@@ -54,17 +54,6 @@ public class @InputActions : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""LeftSide"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b26e4928-5ccc-45b9-97e9-447574c35858"",
-                    ""path"": ""<Touchscreen>/delta/x"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Touch"",
                     ""action"": ""LeftSide"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false

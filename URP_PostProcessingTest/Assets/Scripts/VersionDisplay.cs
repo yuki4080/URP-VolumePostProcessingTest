@@ -10,6 +10,6 @@ public class VersionDisplay : MonoBehaviour
 
     void Update()
     {
-        msg.text = Application.platform + ", Version Number: " + Application.unityVersion + ", " + SystemInfo.graphicsDeviceVersion + ", Color Space: " + _ColorSpace;
+        msg.text = Application.platform + ", UnityVersion: " + Application.unityVersion + "\n" + SystemInfo.graphicsDeviceVersion + "\nColor Space: " + _ColorSpace;
     }
 }
