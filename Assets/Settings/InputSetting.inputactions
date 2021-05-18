@@ -1,5 +1,5 @@
 {
-    "name": "InputActions",
+    "name": "InputSetting",
     "maps": [
         {
             "name": "Camera",
@@ -29,18 +29,7 @@
                     "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
-                    "action": "LeftSide",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6bfbfc65-d9ff-4510-9800-bd3aff779501",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
+                    "groups": "",
                     "action": "LeftSide",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -51,18 +40,7 @@
                     "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
-                    "action": "RightSide",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "bbda21de-c88e-4c92-a764-9c61440d1739",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
+                    "groups": "",
                     "action": "RightSide",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -570,7 +548,7 @@
                     "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
+                    "groups": "",
                     "action": "HidePanel",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -581,7 +559,7 @@
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse",
+                    "groups": "",
                     "action": "HidePanel",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -592,7 +570,7 @@
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse",
+                    "groups": "",
                     "action": "HidePanel",
                     "isComposite": false,
                     "isPartOfComposite": false

@@ -1,22 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using Cinemachine;
 
-public class VCamManager : MonoBehaviour, InputActions.ICameraActions
+public class VCamManager : MonoBehaviour
 {
-    InputActions.CameraActions input;
+    InputSetting input;
     public List<CinemachineVirtualCamera> vcamera;
 
     public int vcamActive = 0;
     void OnEnable() => input.Enable();
+    void OnDisable() => input.Disable();
     void OnDestroy() => input.Disable();
 
     void Awake()
     {
-        input = new InputActions.CameraActions(new InputActions());
-        input.SetCallbacks(this);
+        input = new InputSetting();
+        input.Camera.LeftSide.performed += ctx => vCamChange(false);
+        input.Camera.RightSide.performed += ctx => vCamChange(true);
     }
 
     void vCamChange(bool sw)
@@ -24,16 +24,12 @@ public class VCamManager : MonoBehaviour, InputActions.ICameraActions
         if (sw)
         {
             if (vcamActive ++ >= vcamera.Count - 1)
-            {
                 vcamActive = 0;
-            }
         }
         else
         {
             if (vcamActive -- <= 0)
-            {
                 vcamActive = vcamera.Count - 1;
-            }
         }
 
         for (int i = 0; i <= vcamera.Count; i ++)
@@ -43,17 +39,5 @@ public class VCamManager : MonoBehaviour, InputActions.ICameraActions
             else
                 vcamera[i].Priority = 10;
         }
-    }
-
-    public void OnLeftSide(InputAction.CallbackContext context)
-    {
-        if (context.started)
-            vCamChange(false);
-    }
-
-    public void OnRightSide(InputAction.CallbackContext context)
-    {
-        if (context.started)
-            vCamChange(true);
     }
 }

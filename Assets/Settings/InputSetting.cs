@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Settings/InputActions.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Settings/InputSetting.inputactions'
 
 using System;
 using System.Collections;
@@ -6,13 +6,13 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class @InputActions : IInputActionCollection, IDisposable
+public class @InputSetting : IInputActionCollection, IDisposable
 {
     public InputActionAsset asset { get; }
-    public @InputActions()
+    public @InputSetting()
     {
         asset = InputActionAsset.FromJson(@"{
-    ""name"": ""InputActions"",
+    ""name"": ""InputSetting"",
     ""maps"": [
         {
             ""name"": ""Camera"",
@@ -42,18 +42,7 @@ public class @InputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""LeftSide"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""6bfbfc65-d9ff-4510-9800-bd3aff779501"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
+                    ""groups"": """",
                     ""action"": ""LeftSide"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -64,18 +53,7 @@ public class @InputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/rightShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""RightSide"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""bbda21de-c88e-4c92-a764-9c61440d1739"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
+                    ""groups"": """",
                     ""action"": ""RightSide"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -583,7 +561,7 @@ public class @InputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/start"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Gamepad"",
+                    ""groups"": """",
                     ""action"": ""HidePanel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -594,7 +572,7 @@ public class @InputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
+                    ""groups"": """",
                     ""action"": ""HidePanel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -605,7 +583,7 @@ public class @InputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
+                    ""groups"": """",
                     ""action"": ""HidePanel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -749,8 +727,8 @@ public class @InputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_Camera_RightSide;
     public struct CameraActions
     {
-        private @InputActions m_Wrapper;
-        public CameraActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        private @InputSetting m_Wrapper;
+        public CameraActions(@InputSetting wrapper) { m_Wrapper = wrapper; }
         public InputAction @LeftSide => m_Wrapper.m_Camera_LeftSide;
         public InputAction @RightSide => m_Wrapper.m_Camera_RightSide;
         public InputActionMap Get() { return m_Wrapper.m_Camera; }
@@ -799,8 +777,8 @@ public class @InputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_UI_TrackedDeviceSelect;
     public struct UIActions
     {
-        private @InputActions m_Wrapper;
-        public UIActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        private @InputSetting m_Wrapper;
+        public UIActions(@InputSetting wrapper) { m_Wrapper = wrapper; }
         public InputAction @Navigate => m_Wrapper.m_UI_Navigate;
         public InputAction @Submit => m_Wrapper.m_UI_Submit;
         public InputAction @Cancel => m_Wrapper.m_UI_Cancel;
@@ -902,8 +880,8 @@ public class @InputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_Panel_HidePanel;
     public struct PanelActions
     {
-        private @InputActions m_Wrapper;
-        public PanelActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        private @InputSetting m_Wrapper;
+        public PanelActions(@InputSetting wrapper) { m_Wrapper = wrapper; }
         public InputAction @HidePanel => m_Wrapper.m_Panel_HidePanel;
         public InputActionMap Get() { return m_Wrapper.m_Panel; }
         public void Enable() { Get().Enable(); }

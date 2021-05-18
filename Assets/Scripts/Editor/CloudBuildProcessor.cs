@@ -15,10 +15,8 @@ public class CloudBuildProcessor : IPreprocessBuildWithReport, IProcessSceneWith
 
     public void OnProcessScene(Scene scene, BuildReport report)
     {
-#if !UNITY_EDITOR
         GameObject Info = GameObject.FindGameObjectWithTag("Info");
         Info.GetComponent<VersionDisplay>()._ColorSpace = PlayerSettings.colorSpace.ToString();
-#endif
     }
 
     public int callbackOrder { get { return 0; } }
