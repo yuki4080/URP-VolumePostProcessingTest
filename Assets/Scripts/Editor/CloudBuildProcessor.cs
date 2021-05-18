@@ -16,6 +16,8 @@ public class CloudBuildProcessor : IPreprocessBuildWithReport, IProcessSceneWith
     public void OnProcessScene(Scene scene, BuildReport report)
     {
         GameObject Info = GameObject.FindGameObjectWithTag("Info");
+        if (Info == null)
+            return;
         Info.GetComponent<VersionDisplay>()._ColorSpace = PlayerSettings.colorSpace.ToString();
     }
 
