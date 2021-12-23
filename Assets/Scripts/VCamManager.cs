@@ -6,6 +6,8 @@ public class VCamManager : MonoBehaviour
 {
     InputSetting input;
     public List<CinemachineVirtualCamera> vcamera;
+    int lPriority = 10;     // Low priority value
+    int hPriority = 11;     // High priority value
 
     public int vcamActive = 0;
     void OnEnable() => input.Enable();
@@ -21,23 +23,21 @@ public class VCamManager : MonoBehaviour
 
     void vCamChange(bool sw)
     {
+        int vcamCount = vcamera.Count - 1;
+
         if (sw)
         {
-            if (vcamActive ++ >= vcamera.Count - 1)
+            if (vcamActive ++ >= vcamCount)
                 vcamActive = 0;
         }
         else
         {
             if (vcamActive -- <= 0)
-                vcamActive = vcamera.Count - 1;
+                vcamActive = vcamCount;
         }
 
-        for (int i = 0; i <= vcamera.Count; i ++)
-        {
-            if (i == vcamActive)
-                vcamera[i].Priority = 11;
-            else
-                vcamera[i].Priority = 10;
-        }
+        // Assign a Priority to each virtual cameras
+        for (int i = 0; i <= vcamCount; i ++)
+            vcamera[i].Priority = i == vcamActive ? hPriority : lPriority;
     }
 }
