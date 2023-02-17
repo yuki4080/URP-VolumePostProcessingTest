@@ -21,7 +21,7 @@ public class VCamManager : MonoBehaviour
         input.Camera.RightSide.performed += ctx => vCamChange(true);
     }
 
-    void vCamChange(bool sw)
+    public void vCamChange(bool sw)
     {
         int vcamCount = vcamera.Count - 1;
 

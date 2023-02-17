@@ -15,10 +15,10 @@ public class CloudBuildProcessor : IPreprocessBuildWithReport, IProcessSceneWith
 
     public void OnProcessScene(Scene scene, BuildReport report)
     {
-        GameObject Info = GameObject.FindGameObjectWithTag("Info");
-        if (Info == null)
+        GameObject manager = GameObject.FindGameObjectWithTag("Manager");
+        if (manager == null)
             return;
-        Info.GetComponent<VersionDisplay>()._ColorSpace = PlayerSettings.colorSpace.ToString();
+        manager.GetComponent<PostProcessingManager>()._ColorSpace = PlayerSettings.colorSpace.ToString();
     }
 
     public int callbackOrder { get { return 0; } }
