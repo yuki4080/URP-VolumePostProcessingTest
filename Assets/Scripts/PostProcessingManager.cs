@@ -39,6 +39,7 @@ public class PostProcessingManager : MonoBehaviour
 
     DropdownField _Antialiasing;
     DropdownField _DepthOfField;
+    DropdownField _MotionBlur;
     DropdownField _Tonemapping;
     Button _Bloom;
     Button _ChannelMixer;
@@ -50,7 +51,6 @@ public class PostProcessingManager : MonoBehaviour
     Button _FilmGrain;
     Button _LensDistortion;
     Button _LiftGammaGain;
-    Button _MotionBlur;
     Button _PaniniProjection;
     Button _ShadowsMidtonesHighlights;
     Button _SplitToning;
@@ -226,8 +226,31 @@ public class PostProcessingManager : MonoBehaviour
         _LiftGammaGain = element.Q<Button>("LiftGammaGainButton");
         _LiftGammaGain.clickable.clickedWithEventInfo += (Event) => EffectSwitcher(Effect.LiftGammaGain, _LiftGammaGain);
 
-        _MotionBlur = element.Q<Button>("MotionBlurButton");
-        _MotionBlur.clickable.clickedWithEventInfo += (Event) => EffectSwitcher(Effect.MotionBlur, _MotionBlur);
+        _MotionBlur = element.Q<DropdownField>("MotionBlurDropdownField");
+        _MotionBlur.RegisterValueChangedCallback(Event =>
+        {
+            switch (_MotionBlur.index)
+            {
+                case 0:
+                    motionBlur.active = false;
+                    break;
+                case 1:
+                    motionBlur.active = true;
+#if UNITY_2023_2_OR_NEWER
+                    motionBlur.mode.value = MotionBlurMode.CameraOnly;
+#endif
+                    break;
+#if UNITY_2023_2_OR_NEWER
+                case 2:
+                    motionBlur.active = true;
+                    motionBlur.mode.value = MotionBlurMode.CameraAndObjects;
+                    break;
+#endif
+                default:
+                    _MotionBlur.index = 0;
+                    break;
+            }
+        });
 
         _PaniniProjection = element.Q<Button>("PaniniProjectionButton");
         _PaniniProjection.clickable.clickedWithEventInfo += (Event) => EffectSwitcher(Effect.PaniniProjection, _PaniniProjection);

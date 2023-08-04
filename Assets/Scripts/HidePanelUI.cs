@@ -3,9 +3,9 @@ using UnityEngine.UIElements;
 
 public class HidePanelUI : MonoBehaviour
 {
+    public bool panelState;
+    public bool naviState;
     InputSetting input;
-    bool panelState;
-    bool naviState;
     VisualElement element;
     PostProcessingManager manager;
     VCamManager vCam;

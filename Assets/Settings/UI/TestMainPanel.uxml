@@ -6,92 +6,92 @@
                 <ui:Label text="Universal RP  Post-processing Unit Test" display-tooltip-when-elided="true" name="TitleText" style="color: rgb(0, 0, 0); font-size: 48%;" />
                 <ui:Button display-tooltip-when-elided="true" name="CloseButton" style="font-size: 12px; background-image: url(&apos;project://database/Assets/Sprites/UI/Close.png?fileID=2800000&amp;guid=991400e5bc8fb4f4c8a67b1448684234&amp;type=3#Close&apos;); background-color: rgba(255, 255, 255, 0); width: 70px; height: 70px; -unity-background-image-tint-color: rgb(255, 255, 255); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-top: 3px; margin-bottom: 3px; padding-top: 6px; padding-bottom: 6px;" />
             </ui:VisualElement>
-            <ui:VisualElement name="Contents" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-between;">
+            <ui:VisualElement name="Contents" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-between; font-size: 18px;">
                 <ui:VisualElement name="Column1" style="justify-content: flex-start; width: 50%; margin-left: 10px; margin-top: 10px;">
                     <ui:VisualElement name="Antialiasing" style="flex-direction: row; min-width: auto; min-height: auto; justify-content: space-between;">
-                        <ui:Label text="Antialiasing" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0);" />
-                        <ui:DropdownField index="0" choices="None, FXAA, SMAA, TAA" name="AntialiasingDropdownField" style="justify-content: flex-start; align-items: auto; color: rgb(0, 0, 0); font-size: 20px; white-space: nowrap; -unity-text-align: upper-left; width: 170px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                        <ui:Label text="Antialiasing" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0);" />
+                        <ui:DropdownField index="0" choices="None, FXAA, SMAA, TAA" name="AntialiasingDropdownField" style="justify-content: flex-start; align-items: auto; color: rgb(0, 0, 0); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
                     </ui:VisualElement>
                     <ui:VisualElement name="Dithering" style="flex-direction: row; justify-content: space-between;">
-                        <ui:Label text="Dithering" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
-                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="DitheringButton" style="font-size: 20px; width: 166px;" />
+                        <ui:Label text="Dithering" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
+                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="DitheringButton" />
                     </ui:VisualElement>
                     <ui:VisualElement name="Bloom" style="flex-direction: row; justify-content: space-between;">
-                        <ui:Label text="Bloom" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
-                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="BloomButton" style="font-size: 20px; width: 166px;" />
+                        <ui:Label text="Bloom" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
+                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="BloomButton" />
                     </ui:VisualElement>
                     <ui:VisualElement name="ChannelMixer" style="flex-direction: row; justify-content: space-between;">
-                        <ui:Label text="Channel Mixer" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
-                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="ChannelMixerButton" style="font-size: 20px; width: 166px;" />
+                        <ui:Label text="Channel Mixer" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
+                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="ChannelMixerButton" />
                     </ui:VisualElement>
                     <ui:VisualElement name="ChromaticAberration" style="flex-direction: row; justify-content: space-between;">
-                        <ui:Label text="Chromatic Aberration" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
-                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="ChromaticAberrationButton" style="font-size: 20px; width: 166px;" />
+                        <ui:Label text="Chromatic Aberration" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
+                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="ChromaticAberrationButton" />
                     </ui:VisualElement>
                     <ui:VisualElement name="ColorAdjustments" style="flex-direction: row; justify-content: space-between;">
-                        <ui:Label text="Color Adjustments" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
-                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="ColorAdjustmentsButton" style="font-size: 20px; width: 166px;" />
+                        <ui:Label text="Color Adjustments" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
+                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="ColorAdjustmentsButton" />
                     </ui:VisualElement>
                     <ui:VisualElement name="ColorCurves" style="flex-direction: row; justify-content: space-between;">
-                        <ui:Label text="Color Curves" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
-                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="ColorCurvesButton" style="font-size: 20px; width: 166px;" />
+                        <ui:Label text="Color Curves" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
+                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="ColorCurvesButton" />
                     </ui:VisualElement>
                     <ui:VisualElement name="ColorLookup" style="flex-direction: row; justify-content: space-between;">
-                        <ui:Label text="Color Lookup" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
-                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="ColorLookupButton" style="font-size: 20px; width: 166px;" />
+                        <ui:Label text="Color Lookup" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
+                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="ColorLookupButton" />
                     </ui:VisualElement>
                     <ui:VisualElement name="DepthofField" style="flex-direction: row; justify-content: space-between;">
-                        <ui:Label text="Depth of Field" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
-                        <ui:DropdownField index="0" choices="OFF,Off,Gaussian,Bokeh" name="DoFDropdownField" style="justify-content: flex-start; align-items: auto; color: rgb(0, 0, 0); font-size: 20px; white-space: nowrap; -unity-text-align: upper-left; width: 170px;" />
+                        <ui:Label text="Depth of Field" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
+                        <ui:DropdownField index="0" choices="OFF,Off,Gaussian,Bokeh" name="DoFDropdownField" style="justify-content: flex-start; align-items: auto; color: rgb(0, 0, 0);" />
                     </ui:VisualElement>
                     <ui:VisualElement name="FilmGrain" style="flex-direction: row; justify-content: space-between;">
-                        <ui:Label text="Film Grain" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
-                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="FilmGrainButton" style="font-size: 20px; width: 166px;" />
+                        <ui:Label text="Film Grain" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
+                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="FilmGrainButton" />
                     </ui:VisualElement>
                     <ui:VisualElement name="LensDistortion" style="flex-direction: row; justify-content: space-between;">
-                        <ui:Label text="Lens Distortion" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
-                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="LensDistortionButton" style="font-size: 20px; width: 166px;" />
+                        <ui:Label text="Lens Distortion" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
+                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="LensDistortionButton" />
                     </ui:VisualElement>
                 </ui:VisualElement>
                 <ui:VisualElement name="Blank" style="margin-left: 50px; margin-right: 50px; margin-top: 50px; margin-bottom: 50px;" />
                 <ui:VisualElement name="Column2" style="width: 50%; margin-left: 0; margin-top: 10px;">
                     <ui:VisualElement name="LiftGammaGain" style="flex-direction: row; justify-content: space-between;">
-                        <ui:Label text="Lift Gamma Gain" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
-                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="LiftGammaGainButton" style="font-size: 20px; width: 166px;" />
+                        <ui:Label text="Lift Gamma Gain" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
+                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="LiftGammaGainButton" />
                     </ui:VisualElement>
                     <ui:VisualElement name="MotionBlur" style="flex-direction: row; justify-content: space-between;">
-                        <ui:Label text="Camera Motion Blur" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
-                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="MotionBlurButton" style="font-size: 20px; width: 166px;" />
+                        <ui:Label text="Motion Blur" display-tooltip-when-elided="true" name="Label" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
+                        <ui:DropdownField index="0" choices="OFF,Camera Only,CameraAndObjects" name="MotionBlurDropdownField" style="justify-content: flex-start; align-items: auto; color: rgb(0, 0, 0);" />
                     </ui:VisualElement>
                     <ui:VisualElement name="PaniniProjection" style="flex-direction: row; justify-content: space-between;">
-                        <ui:Label text="Panini Projection" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
-                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="PaniniProjectionButton" style="font-size: 20px; width: 166px;" />
+                        <ui:Label text="Panini Projection" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
+                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="PaniniProjectionButton" />
                     </ui:VisualElement>
                     <ui:VisualElement name="ShadowsMidtonesHighlights" style="flex-direction: row; justify-content: space-between; flex-wrap: nowrap;">
-                        <ui:Label text="Shadows Midtones Highlights" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0); -unity-text-align: middle-left; white-space: nowrap;" />
-                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="ShadowsMidtonesHighlightsButton" style="font-size: 20px; width: 166px;" />
+                        <ui:Label text="Shadows Midtones Highlights" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-left; white-space: nowrap;" />
+                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="ShadowsMidtonesHighlightsButton" />
                     </ui:VisualElement>
                     <ui:VisualElement name="SplitToning" style="flex-direction: row; justify-content: space-between;">
-                        <ui:Label text="Split Toning" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
-                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="SplitToningButton" style="font-size: 20px; width: 166px;" />
+                        <ui:Label text="Split Toning" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
+                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="SplitToningButton" />
                     </ui:VisualElement>
                     <ui:VisualElement name="Tonemapping" style="flex-direction: row; justify-content: space-between;">
-                        <ui:Label text="Tonemapping" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
-                        <ui:DropdownField index="0" choices="OFF,None,Neutral,ACES" name="TonemappingDropdownField" style="justify-content: flex-start; align-items: auto; color: rgb(0, 0, 0); font-size: 20px; white-space: nowrap; -unity-text-align: upper-left; width: 170px;" />
+                        <ui:Label text="Tonemapping" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
+                        <ui:DropdownField index="0" choices="OFF,None,Neutral,ACES" name="TonemappingDropdownField" style="justify-content: flex-start; align-items: auto; color: rgb(0, 0, 0);" />
                     </ui:VisualElement>
                     <ui:VisualElement name="Vignette" style="flex-direction: row; justify-content: space-between;">
-                        <ui:Label text="Vignette" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
-                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="VignetteButton" style="font-size: 20px; width: 166px;" />
+                        <ui:Label text="Vignette" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
+                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="VignetteButton" />
                     </ui:VisualElement>
                     <ui:VisualElement name="WhiteBalance" style="flex-direction: row; justify-content: space-between;">
-                        <ui:Label text="White Balance" display-tooltip-when-elided="true" style="font-size: 20px; color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
-                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="WhiteBalanceButton" style="font-size: 20px; width: 166px;" />
+                        <ui:Label text="White Balance" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
+                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="WhiteBalanceButton" />
                     </ui:VisualElement>
                     <ui:VisualElement name="Version" style="margin-top: 30px;">
-                        <ui:Label text="Version" display-tooltip-when-elided="true" name="VersionLabel" style="color: rgb(0, 0, 0); font-size: 20px;" />
+                        <ui:Label text="Version" display-tooltip-when-elided="true" name="VersionLabel" style="color: rgb(0, 0, 0);" />
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="Column3" style="width: 15%;" />
+                <ui:VisualElement name="Column3" style="width: 15%; margin-left: -40px; margin-right: -40px; margin-top: -40px; margin-bottom: -40px;" />
             </ui:VisualElement>
             <ui:VisualElement name="Footer" style="padding-bottom: 20px;" />
         </ui:VisualElement>

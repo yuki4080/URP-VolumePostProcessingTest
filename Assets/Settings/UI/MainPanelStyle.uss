@@ -1,1 +1,11 @@
-VisualElement {}
+VisualElement {
+}
+
+Button {
+    width: 240px;
+    -unity-text-align: upper-center;
+}
+
+DropdownField {
+    width: 244px;
+}
