@@ -31,6 +31,9 @@ public class PostProcessingManager : MonoBehaviour
     public LiftGammaGain liftGammaGain;
     public MotionBlur motionBlur;
     public PaniniProjection paniniProjection;
+#if UNITY_2023_1_OR_NEWER
+    public ScreenSpaceLensFlare screenSpaceLensFlare;
+#endif
     public ShadowsMidtonesHighlights shadowsMidtonesHighlights;
     public SplitToning splitToning;
     public Tonemapping tonemapping;
@@ -52,6 +55,9 @@ public class PostProcessingManager : MonoBehaviour
     Button _LensDistortion;
     Button _LiftGammaGain;
     Button _PaniniProjection;
+#if UNITY_2023_1_OR_NEWER
+    Button _ScreenSpaceLensFlare;
+#endif
     Button _ShadowsMidtonesHighlights;
     Button _SplitToning;
     Button _Vignette;
@@ -85,6 +91,19 @@ public class PostProcessingManager : MonoBehaviour
         profile.TryGet(out liftGammaGain);
         profile.TryGet(out motionBlur);
         profile.TryGet(out paniniProjection);
+#if UNITY_2023_1_OR_NEWER
+        profile.TryGet(out screenSpaceLensFlare);
+        if (screenSpaceLensFlare == null)
+        {
+            screenSpaceLensFlare = profile.Add<ScreenSpaceLensFlare>();
+            screenSpaceLensFlare.intensity.overrideState = true;
+            screenSpaceLensFlare.intensity.value = 5;
+            screenSpaceLensFlare.tintColor.overrideState = true;
+            screenSpaceLensFlare.tintColor.value = Color.red;
+            screenSpaceLensFlare.bloomMip.overrideState = true;
+            screenSpaceLensFlare.bloomMip.value = 5;
+        }
+#endif
         profile.TryGet(out shadowsMidtonesHighlights);
         profile.TryGet(out splitToning);
         profile.TryGet(out tonemapping);
@@ -104,6 +123,9 @@ public class PostProcessingManager : MonoBehaviour
         liftGammaGain.active =
         motionBlur.active =
         paniniProjection.active =
+#if UNITY_2023_1_OR_NEWER
+        screenSpaceLensFlare.active =
+#endif
         shadowsMidtonesHighlights.active =
         splitToning.active =
         tonemapping.active =
@@ -255,6 +277,11 @@ public class PostProcessingManager : MonoBehaviour
         _PaniniProjection = element.Q<Button>("PaniniProjectionButton");
         _PaniniProjection.clickable.clickedWithEventInfo += (Event) => EffectSwitcher(Effect.PaniniProjection, _PaniniProjection);
 
+#if UNITY_2023_1_OR_NEWER
+        _ScreenSpaceLensFlare = element.Q<Button>("ScreenSpaceLensFlareButton");
+        _ScreenSpaceLensFlare.clickable.clickedWithEventInfo += (Event) => EffectSwitcher(Effect.ScreenSpaceLensFlare, _ScreenSpaceLensFlare);
+#endif
+
         _ShadowsMidtonesHighlights = element.Q<Button>("ShadowsMidtonesHighlightsButton");
         _ShadowsMidtonesHighlights.clickable.clickedWithEventInfo += (Event) => EffectSwitcher(Effect.ShadowsMidtonesHighlights, _ShadowsMidtonesHighlights);
 
@@ -330,6 +357,11 @@ public class PostProcessingManager : MonoBehaviour
             case Effect.PaniniProjection:
                 paniniProjection.active = flag;
                 break;
+#if UNITY_2023_1_OR_NEWER
+            case Effect.ScreenSpaceLensFlare:
+                screenSpaceLensFlare.active = flag;
+                break;
+#endif
             case Effect.ShadowsMidtonesHighlights:
                 shadowsMidtonesHighlights.active = flag;
                 break;
@@ -360,6 +392,9 @@ public class PostProcessingManager : MonoBehaviour
         LiftGammaGain,
         MotionBlur,
         PaniniProjection,
+#if UNITY_2023_1_OR_NEWER
+        ScreenSpaceLensFlare,
+#endif
         ShadowsMidtonesHighlights,
         SplitToning,
         Vignette,

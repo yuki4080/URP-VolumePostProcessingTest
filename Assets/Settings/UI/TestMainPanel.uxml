@@ -67,6 +67,10 @@
                         <ui:Label text="Panini Projection" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
                         <ui:Button text="OFF" display-tooltip-when-elided="true" name="PaniniProjectionButton" />
                     </ui:VisualElement>
+                    <ui:VisualElement name="ScreenSpaceLensFlare" style="flex-direction: row; justify-content: space-between; flex-wrap: nowrap;">
+                        <ui:Label text="Screen Space Lens Flare" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-left; white-space: nowrap;" />
+                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="ScreenSpaceLensFlareButton" />
+                    </ui:VisualElement>
                     <ui:VisualElement name="ShadowsMidtonesHighlights" style="flex-direction: row; justify-content: space-between; flex-wrap: nowrap;">
                         <ui:Label text="Shadows Midtones Highlights" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-left; white-space: nowrap;" />
                         <ui:Button text="OFF" display-tooltip-when-elided="true" name="ShadowsMidtonesHighlightsButton" />
