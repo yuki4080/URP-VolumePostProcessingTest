@@ -4,7 +4,7 @@
         <ui:VisualElement name="MainPanel" style="background-color: rgb(212, 212, 212);">
             <ui:VisualElement name="Header" style="flex-direction: row; flex-wrap: nowrap; align-items: stretch; justify-content: space-between; margin-bottom: 10px;">
                 <ui:Label text="Universal RP  Post-processing Unit Test" display-tooltip-when-elided="true" name="TitleText" style="color: rgb(0, 0, 0); font-size: 48%;" />
-                <ui:Button display-tooltip-when-elided="true" name="CloseButton" style="font-size: 12px; background-image: url(&apos;project://database/Assets/Sprites/UI/Close.png?fileID=2800000&amp;guid=991400e5bc8fb4f4c8a67b1448684234&amp;type=3#Close&apos;); background-color: rgba(255, 255, 255, 0); width: 70px; height: 70px; -unity-background-image-tint-color: rgb(255, 255, 255); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-top: 3px; margin-bottom: 3px; padding-top: 6px; padding-bottom: 6px;" />
+                <ui:Button display-tooltip-when-elided="true" name="CloseButton" style="font-size: 12px; background-image: url(&quot;project://database/Assets/Sprites/UI/Close.png?fileID=2800000&amp;guid=991400e5bc8fb4f4c8a67b1448684234&amp;type=3#Close&quot;); background-color: rgba(255, 255, 255, 0); width: 70px; height: 70px; -unity-background-image-tint-color: rgb(255, 255, 255); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-top: 3px; margin-bottom: 3px; padding-top: 6px; padding-bottom: 6px;" />
             </ui:VisualElement>
             <ui:VisualElement name="Contents" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-between; font-size: 18px;">
                 <ui:VisualElement name="Column1" style="justify-content: flex-start; width: 50%; margin-left: 10px; margin-top: 10px;">
@@ -18,7 +18,7 @@
                     </ui:VisualElement>
                     <ui:VisualElement name="Bloom" style="flex-direction: row; justify-content: space-between;">
                         <ui:Label text="Bloom" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />
-                        <ui:Button text="OFF" display-tooltip-when-elided="true" name="BloomButton" />
+                        <ui:DropdownField index="0" choices="OFF,Gaussian,Dual,Kawase" name="BloomDropdownField" style="justify-content: flex-start; align-items: auto; color: rgb(0, 0, 0); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
                     </ui:VisualElement>
                     <ui:VisualElement name="ChannelMixer" style="flex-direction: row; justify-content: space-between;">
                         <ui:Label text="Channel Mixer" display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); -unity-text-align: upper-center;" />

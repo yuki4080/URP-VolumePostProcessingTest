@@ -41,10 +41,10 @@ public class PostProcessingManager : MonoBehaviour
     public WhiteBalance whiteBalance;
 
     DropdownField _Antialiasing;
+    DropdownField _Bloom;
     DropdownField _DepthOfField;
     DropdownField _MotionBlur;
     DropdownField _Tonemapping;
-    Button _Bloom;
     Button _ChannelMixer;
     Button _ChromaticAberration;
     Button _ColorAdjustments;
@@ -78,6 +78,10 @@ public class PostProcessingManager : MonoBehaviour
 
         // TryGet effect profile
         profile.TryGet(out bloom);
+#if UNITY_6000_3_OR_NEWER
+        bloom.filter.overrideState = true;
+        bloom.filter.value = BloomFilterMode.Gaussian;
+#endif
         profile.TryGet(out channelMixer);
         profile.TryGet(out chromaticAberration);
         profile.TryGet(out colorAdjustments);
@@ -162,7 +166,37 @@ public class PostProcessingManager : MonoBehaviour
                     _Antialiasing.index = 0;
                     break;
             }
-        }); 
+        });
+
+        _Bloom = element.Q<DropdownField>("BloomDropdownField");
+        _Bloom.RegisterValueChangedCallback(Event =>
+        {
+            switch (_Bloom.index)
+            {
+                case 0:
+                    bloom.active = false;
+                    break;
+                case 1:
+                    bloom.active = true;
+#if UNITY_6000_3_OR_NEWER
+                    bloom.filter.value = BloomFilterMode.Gaussian;
+#endif
+                    break;
+#if UNITY_6000_3_OR_NEWER
+                case 2:
+                    bloom.active = true;
+                    bloom.filter.value = BloomFilterMode.Dual;
+                    break;
+                case 3:
+                    bloom.active = true;
+                    bloom.filter.value = BloomFilterMode.Kawase;
+                    break;
+#endif
+                default:
+                    _Bloom.index = 0;
+                    break;
+            }
+        });
 
         _DepthOfField = element.Q<DropdownField>("DoFDropdownField");
         _DepthOfField.RegisterValueChangedCallback(Event =>
@@ -215,9 +249,6 @@ public class PostProcessingManager : MonoBehaviour
                     break;
             }
         });
-
-        _Bloom = element.Q<Button>("BloomButton");
-        _Bloom.clickable.clickedWithEventInfo += (Event) => EffectSwitcher(Effect.Bloom, _Bloom);
 
         _ChannelMixer = element.Q<Button>("ChannelMixerButton");
         _ChannelMixer.clickable.clickedWithEventInfo += (Event) => EffectSwitcher(Effect.ChannelMixer, _ChannelMixer);
@@ -319,9 +350,6 @@ public class PostProcessingManager : MonoBehaviour
 
         switch (effect)
         {
-            case Effect.Bloom:
-                bloom.active = flag;
-                break;
             case Effect.ChannelMixer:
                 channelMixer.active = flag;
                 break;
@@ -378,7 +406,6 @@ public class PostProcessingManager : MonoBehaviour
 
     public enum Effect
     {
-        Bloom,
         ChannelMixer,
         ChromaticAberration,
         ColorAdjustments,
