@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
+using Unity.Cinemachine;
 
 public class VCamManager : MonoBehaviour
 {
     InputSetting input;
-    public List<CinemachineVirtualCamera> vcamera;
+    public List<CinemachineCamera> vcamera;
     int lPriority = 10;     // Low priority value
     int hPriority = 11;     // High priority value
 

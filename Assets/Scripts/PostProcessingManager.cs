@@ -15,7 +15,7 @@ public class PostProcessingManager : MonoBehaviour
 
     VisualElement element;
     HidePanelUI hideUi;
-    public string _ColorSpace;
+    string _ColorSpace;
 
     [Header("PPSv3制御可能なエフェクト")]
     public AntialiasingMode antialiasing;
@@ -68,9 +68,7 @@ public class PostProcessingManager : MonoBehaviour
 
     void Awake()
     {
-#if UNITY_EDITOR
-        _ColorSpace = UnityEditor.PlayerSettings.colorSpace.ToString();
-#endif
+        _ColorSpace = QualitySettings.activeColorSpace.ToString();
         camera = Camera.main;
         universalAdditionalCameraData = camera.GetComponent<UniversalAdditionalCameraData>();
         AntialiasingModeChange(AntialiasingMode.None); // AntialiasingMode None
